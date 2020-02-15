@@ -4,7 +4,7 @@ using namespace std;
 
 void affichage(string u, string v) {
   /* code */
-  cout << "Leur concatenantion" << u + v << '\n';
+  cout << u + v << '\n';
 }
 
 int main(int argc, char const *argv[]) {
@@ -16,8 +16,7 @@ int main(int argc, char const *argv[]) {
   cin >> u;
   cout <<  "Le deuxième mot" << '\n';
   cin >> v;
-  cout <<  << endl;
-
+  cout << "Leur concatenantion : " ;
   affichage(u, v);
 
   return 0;
