@@ -3,6 +3,7 @@
 
 using namespace std;
 
+/* Fonction pour echanger des valeurs entre deux variables */
 void swap(char *str, int i, int j)
 {
     char tmp = str[i];
@@ -10,22 +11,18 @@ void swap(char *str, int i, int j)
     str[j] = tmp;
 }
 
-int main(void)
-{
-    char str[20];
-    printf("entrer le mot miroir svp\n");
-    std::cin >> str;
-    int len = strlen(str);
-    printf("Le miroir de %s\n", str);
-    for(int i = 0; i < len / 2; i++)
-        swap(str, i, len - i - 1);
-    printf("est %s.\n", str);
-    return 0;
-}
-
-
 void affichage(char *motMiroir) {
+    /* J'affect la taille du tableau à la variable taille */
+    int taille = strlen(motMiroir);
 
+    printf("Le miroir de %s\n", motMiroir);
+
+    /* Ici je parcours le tableau pour en faire swaper les élements */
+    for (size_t i = 0; i < taille / 2; i++) {
+      /* i prend la  valeur courante, et taille=longeur du tableau */
+      swap(motMiroir, i, taille - i - 1);
+    }
+    printf("est %s\n", motMiroir);
 }
 
 int main(int argc, char const *argv[]) {
